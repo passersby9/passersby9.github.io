@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<meta charset="utf-8">
+	<title>目录-黑暗之魂图书馆</title>
+	<style type="text/css">
+	html,body{
+		height:100%;
+		width:100%;
+	}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.header{
+		position: fixed;
+		background-color: #948b8ba8;
+		height:60px; 
+		right: 0;
+		left: 0;
+		display: flex;
+	}
+	#menu ul{
+		display: flex;
+		list-style: none;
+	}
+	#menu li{
+		height: 60px;
+		width:80px;
+		text-align: center;
+		border-right: 1px solid #ffffff; 
+	}
+	#menu li:last-child{
+		border-right: none;
+	}
+	#menu li a{
+		height: 60px;
+		display: block;
+		color:black;
+		width: 80px;
+		text-decoration: none;
+		text-align: center;
+		line-height: 60px;
+	}
+	#menu li a:hover{
+		background-color: gray;
+	}
+	.totop{
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		text-align: center;
+		position: fixed;
+		right: 100px;
+		bottom: 100px;
+	}
+	.main{
+		position: fixed;
+		width: 100%;
+		top:60px;
+		bottom: 0;
+		background: url(/img/7aec54e736d12f2e72db323e41c2d56284356896.jpg)no-repeat;
+		background-size: length:auto;
+		background-position: center;
+		background-attachment: scroll;
+		opacity: 0.5;
+	}
+	.bodies{
+		position: fixed;
+		top:60px;
+		bottom: 0;
+		left: 50%;
+		margin-left:-400px; 
+		width:800px;
+		opacity: 0.5;
+		background-color: #948b8ba8;
+		overflow: scroll;
+		overflow-x:visible;<!--js需求--> 
+	}
+	.lable{
+		position: fixed;
+		top:50%;
+		margin-top: -200px;
+		height: 210px;
+		width: 150px;
+		background-color: gray;
+		opacity: 0.3;
+		left: 50%;
+		margin-left:-550px; 
+	}
+	#labmenu ul{list-style:none;}
+	#labmenu li{height: 70px;width:150px;display: block;text-align: center;border-bottom: 1px solid white;line-height: 70px;}
+	#labmenu li:last-child{border-bottom: none;}
+	#list li{display: block;width:800px;height:50px;line-height: 50px;border-bottom: 1px solid black;}
+	#list li:last-child{border-bottom: none;}
+	#list li a{display:block;color: black;height: 50px;width: 800px;text-decoration: none;line-height: 50px;}
+	#list li a:hover{background-color: gray;}
+	</style>
+</head>
+<body>
+	<div id="menu" class="header">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="/list.html">目录</a></li>
+			<li><a href="/form.html">表单</a></li>	
+		</ul>
+		<div style="text-align: center;line-height: 60px;position: absolute;right: 30px ">黑暗之魂图书馆</div><!--图片预备-->	
+	</div>
+	
+	<div class="main"></div>
+	<div class="totop">Top</div>
+	<a href="/list.html" style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop">Top</a>
+	<div id="list" class="bodies">
+		<ul>
+			<li><a href="/001.html">001</a></li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+			<li>(空)</li>
+		</ul>
+	</div>
+	<div id="labmenu" class="lable" style="background: white;opacity: 1;">
+		<ul>
+			<li>图片</li>
+			<li>音频</li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="labmenu" class="lable">
+		<ul>
+			<li>图片</li>
+			<li>音频</li>
+			<li></li>
+		</ul>
+	</div>
+
+</body>
+</html>
