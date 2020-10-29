@@ -4,89 +4,8 @@
 	<meta charset="utf-8">
 	<title>001-图片-黑暗之魂图书馆</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="self.css">
 	<style type="text/css">
-			html,body{
-		height:100%;
-		width:100%;
-	}
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	.header{
-		position: fixed;
-		background-color: #948b8ba8;
-		height:60px; 
-		right: 0;
-		left: 0;
-		display: flex;
-	}
-	#menu ul{
-		display: flex;
-		list-style: none;
-	}
-	#menu li{
-		height: 60px;
-		width:80px;
-		text-align: center;
-		border-right: 1px solid #ffffff; 
-	}
-	#menu li:last-child{
-		border-right: none;
-	}
-	#menu li a{
-		height: 60px;
-		display: block;
-		color:black;
-		width: 80px;
-		text-decoration: none;
-		text-align: center;
-		line-height: 60px;
-	}
-	#menu li a:hover{
-		background-color: gray;
-	}
-	.totop{
-		height: 50px;
-		width: 50px;
-		line-height: 50px;
-		text-align: center;
-		position: fixed;
-		right: 100px;
-		bottom: 100px;
-	}
-	.main{
-		position: fixed;
-		width: 100%;
-		top:60px;
-		bottom: 0;
-		background: url(/img/7aec54e736d12f2e72db323e41c2d56284356896.jpg)no-repeat;
-		background-size: length:auto;
-		background-position: center;
-		background-attachment: scroll;
-		opacity: 0.5;
-	}
-	.bodies{
-		position: fixed;
-		top:60px;
-		bottom: 0;
-		left: 50%;
-		margin-left:-400px; 
-		width:800px;
-		opacity: 0.5;
-		background-color: #948b8ba8;
-	}
-	.lable{
-		position: fixed;
-		top:50%;
-		margin-top: -200px;
-		height: 210px;
-		width: 150px;
-		background-color: gray;
-		opacity: 0.3;
-		left: 50%;
-		margin-left:-550px; 
-	}
 	.return{
 		height: 50px;
 		width:100px;
@@ -100,12 +19,24 @@
 	#return a{display: block;height:50px;width: 100px;text-decoration: none;}
 	#return a:hover{ background-color: gray;opacity: 1; }
 	.texts{
-		background-color: #868686;
-		height: 400px;
-		width:300px;
+		background-color: #cfd5da;
 		float: right;
 		margin-right: 50px;
+		margin-top: 20px;
+		border-left: #c2c2c4 solid 4px;
+		display: block;
 	}
+	.tb{
+		background-color: transparent;
+		width:300px;
+		border-spacing: 0;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		margin-left: 10px;
+	}
+	#tb th,td{border-right:1px solid black;border-bottom:1px solid black;padding: 3px; }
+	#texts p{padding:25px;}
+	.text-cen{text-align:center;}
 	</style>
 </head>
 <body>
@@ -121,16 +52,15 @@
 	<div class="main"></div>
 	<div class="totop">Top</div>
 		<a href="/list.html" style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop">Top</a>
-		<div class="bodies">
+		<div class="bodies" style="overflow: visible;">
 	</div>
-	<div class="bodies" style="opacity: 1;">
+	<div class="bodies" style="opacity: 1;overflow: visible;">
 		<div id="return" class="return">
 			<a href="/list.html" ><---</a>
 		</div>
 		<h1>001-元素瓶</h1>
 		<div>
-			<img src="/img/show/a4b87bcf3bc79f3d167c8273b3a1cd11738b295d.jpg">
-			<div class="texts">
+			<blockquote id="texts" class="texts">
 			<p>
 				暗绿色玻璃瓶，
 				<br>
@@ -144,13 +74,17 @@
 				<br>
 				而原素瓶也一直随之旅行。
 			</p>
-			</div>
-			<table >
-				<tr><th>效果</th><td>借着营火累积原素，喝下去便能恢复血量</td></tr>
-				<tr><th>售价</th><td>不可出售</td></tr>
-				<tr><th>最大持有</th><td>15</td></tr>
-				<tr><th>收纳数</th><td>不可收纳</td></tr>
-				<tr><th>类别</th><td>消耗品·回复</td></tr>
+			</blockquote>
+			<table id="tb" class="tb">
+				<thead><tr><th colspan="2">元素瓶</th></tr></thead>
+				<tbody>
+					<tr><td colspan="2" class="text-cen"><img src="/img/show/a4b87bcf3bc79f3d167c8273b3a1cd11738b295d.jpg"></td></tr>
+					<tr><th>效果</th><td>借着营火累积原素，喝下去便能恢复血量</td></tr>
+					<tr><th>售价</th><td>不可出售</td></tr>
+					<tr><th>最大持有</th><td>15</td></tr>
+					<tr><th>收纳数</th><td>不可收纳</td></tr>
+					<tr><th>类别</th><td>消耗品·回复</td></tr>
+				</tbody>
 			</table>
 		</div>
 	</div>

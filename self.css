@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="self.css">
-	<meta charset="utf-8">
-	<title>目录-黑暗之魂图书馆</title>
-	<!--<style type="text/css">
-	html,body{
+html,body{
 		height:100%;
 		width:100%;
 	}
@@ -77,7 +69,7 @@
 		opacity: 0.5;
 		background-color: #948b8ba8;
 		overflow: scroll;
-		overflow-x:visible;
+		overflow-x:visible;<!--js需求--> 
 	}
 	.lable{
 		position: fixed;
@@ -97,56 +89,35 @@
 	#list li:last-child{border-bottom: none;}
 	#list li a{display:block;color: black;height: 50px;width: 800px;text-decoration: none;line-height: 50px;}
 	#list li a:hover{background-color: gray;}
-	</style>-->
-</head>
-<body>
-	<div id="menu" class="header">
-		<ul>
-			<li><a href="/">首页</a></li>
-			<li><a href="/list.html">目录</a></li>
-			<li><a href="/form.html">表单</a></li>	
-		</ul>
-		<div style="text-align: center;line-height: 60px;position: absolute;right: 30px ">黑暗之魂图书馆</div><!--图片预备-->	
-	</div>
-	
-	<div class="main"></div>
-	<div class="totop">Top</div>
-	<a href="/list.html" style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop">Top</a>
-	<div id="list" class="bodies">
-		<ul>
-			<li><a href="/001.html">001</a></li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-			<li>(空)</li>
-		</ul>
-	</div>
-	<div id="labmenu" class="lable" style="background: white;opacity: 1;">
-		<ul>
-			<li>图片</li>
-			<li>音频</li>
-			<li></li>
-		</ul>
-	</div>
-	<div id="labmenu" class="lable">
-		<ul>
-			<li>图片</li>
-			<li>音频</li>
-			<li></li>
-		</ul>
-	</div>
+	.return{
+		height: 50px;
+		width:100px;
+		background-color: #948b8ba8;
+		line-height: 50px;
+		text-align: center;
+		position: fixed;
+		top:100px;
+		margin-left: -100px;
+	}
+	#return a{display: block;height:50px;width: 100px;text-decoration: none;}
+	#return a:hover{ background-color: gray;opacity: 1; }
 
-</body>
-</html>
+	@font-face
+{
+	font-family: 'webfont';
+	font-display: swap;
+	src: url('/font/webfont_194hyadtkld/webfont.eot');
+	src:url('/font/webfont_194hyadtkld/webfont.eot?#iefix') format('embedded-opentype'),
+	url('/font/webfont_194hyadtkld/webfont.woff2') format('woff2'),
+	url('/font/webfont_194hyadtkld/webfont.woff') format('woff'),
+	url('/font/webfont_194hyadtkld/webfont.ttf') format('truetype'),
+	url('/font/webfont_194hyadtkld/webfont.svg#webfont') format('svg');
+}
+.web-font{
+	font-family: "webfont"!important;
+	font-size: 50px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #ffffff;
+}
