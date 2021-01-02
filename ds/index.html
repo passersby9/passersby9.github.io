@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ <link rel="stylesheet" type="text/css" href="css/normalize.css">
+ <link rel="stylesheet" type="text/css" href="css/self.css">
+	<title>黑暗之魂图书馆</title>
+<style type="text/css">
+*{margin: 0;padding: 0}
+html,body{
+	height: 100%;
+	width:100%;
+}
+.bgclass{
+	background:url(img/cropped-297f51ce36d3d53947b200ce3687e950342ab042.png)no-repeat;
+	height: 90%;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+}
+h1{font-family: "webfont"!important;}
+ul{
+	display: flex;
+	list-style: none;
+}
+li{
+	height: 60px;
+	width:80px;
+	text-align: center;
+	border-right: 1px solid #bbb; 
+}
+li:last-child{
+	border-right: none;
+}
+li a{
+	height: 60px;
+	display: block;
+	color:black;
+	width: 80px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 60px;
+}
+li a:hover{
+	background-color: gray;
+}
+</style>
+</head>
+<body>
+<div id="background" class="bgclass">
+	<div id="headtitle" style="position: absolute;left: 50%;top: 50%; ">
+		<h1 style="margin-left:-50% ;" ><i class="web-font">黑暗之魂图书馆</i></h1>
+	</div>
+</div>
+<div id="guider" style="position:relative;height: 10%;width: 90%;left: 0;bottom: 0;">
+	<div style="position: relative;left: 10%;">
+		<ul style="position:relative;top:-50%">
+			<li><a href="/">首页</a></li>
+			<li><a href="/list.html">目录</a></li>
+			<li><a href="/form.html">表单</a></li>
+		</ul>
+	</div>
+</div>
+</html>

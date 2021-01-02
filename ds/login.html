@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/self.css">
+	<link rel="stylesheet" href="./font/font_2184537_7gi8xxcq17q/iconfont.css">
+	<base target="_parent" />
+	<script type="text/javascript" src="js/self.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.1/jquery.js"></script>
+	<title>登录</title>
+</head>
+<body onlaod="return()">
+	<iframe src="head.html" scrolling="no" frameborder="0" height="60" width="100%" marginheight="60px" id="menu"></iframe>
+	<div class="main"></div>
+	<div class="bodies" style="opacity: 1;">
+	<div>
+	<h2>账号</h2>
+	<input type="text" name="account" id="account">
+	</div>
+	<div>
+	<h2>密码</h2>
+	<input type="text" name="code" id="code">
+	</div>
+	<button>登录</button>
+	</div>
+	<script type="text/javascript">
+	$("button").on("click",function(){
+		var account=$("#account").val();
+		var code=$("#code").val();
+		alert("正在登录");
+		setTimeout(login,500);
+		document.cookie="account="+account;
+		document.cookie="code="+code;
+		console.log(document.cookie);
+	})
+	function login(){
+		alert("已登录");
+		$("#account").val("");
+		$("#code").val("");
+		window.location.href="javascript:history.go(-1)";
+	}
+	function lhtml(){
+		window.location.href="javascript:history.go(-1)";
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/self.css">
+	<link rel="stylesheet" href="./font/font_2184537_7gi8xxcq17q/iconfont.css">
+	<meta charset="utf-8">
+	<title>目录-黑暗之魂图书馆</title>
+	<base target="_parent" />
+	<script type="text/javascript" src="js/self.js"></script>
+	<script type="text/javascript" src="js/ejs.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/a-data.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.1/jquery.js"></script>
+</head>
+<body>
+	
+	<iframe src="head.html" scrolling="no" frameborder="0" height="60" width="100%" marginheight="60px" id="menu"></iframe>
+	
+	<div class="main"></div>
+	<div class="totop"><span class="iconfont iconarrow-up"></span></div>
+	<a href="/list.html#menu" style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop"><span class="iconfont iconarrow-up"></span></a>
+	<div id="list" class="bodies">
+		<div class="p-div">
+		<!--<ul>
+			<li><a href="/new_li.html">(新建)</a></li>
+			<li><a href="/show.html#001">001</a></li>
+		</ul>-->
+		</div>
+		<div class="a-div display-none">
+			<!--<li><a href="/001.html">001</a></li>-->
+		</ul>
+		</div>
+	</div>
+
+	<div id="labmenu" class="lable" style="background: white;opacity: 1;">
+		<ul>
+			<li>图片</li>
+			<li>音频</li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="labmenu" class="lable">
+		<ul>
+			<li class="active"><a href="javascript:;" class="p">图片</a></li>
+			<li><a href="javascript:;" class="a">音频</a></li>
+			<li></li>
+			</ul>
+	</div>
+	<script type="text/javascript">
+		tabChange($(".lable a"));
+		$.get("tpl/list.tpl",function(result){
+			var list=ejs.compile(result)(links);
+			$(".p-div").html(list);
+		})
+		$.get("tpl/a-list.tpl",function(result){
+			var list=ejs.compile(result)(a_links);
+			$(".a-div").html(list);
+		})
+	</script>
+</body>
+</html>

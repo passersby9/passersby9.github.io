@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/self.css">
+	<link rel="stylesheet" href="./font/font_2184537_7gi8xxcq17q/iconfont.css">
+	<base target="_parent" />
+	<script type="text/javascript" src="js/self.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.1/jquery.js"></script>
+	<script src="js/data.js"></script>
+	<title>新页面编辑</title>
+	<style type="text/css">
+	.text-cen{text-align:center;height: 248px;width:300px; }
+	.save{
+		height:50px;
+		width: 200px;
+		margin-top:50px;
+		margin-left: calc(50% - 100px);
+	}
+	</style>
+</head>
+<body>
+	<iframe src="head.html" scrolling="no" frameborder="0" height="60" width="100%" marginheight="60px" id="menu"></iframe>
+	<div class="main"></div>
+	<div class="totop"><span class="iconfont iconarrow-up"></span></div>
+		<a href="/001.html#001" style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop"><span class="iconfont iconarrow-up"></span></a>
+	</div>
+	<div class="bodies" style="opacity: 1;">
+		<div id="return" class="return">
+			<a href="/list.html" ><span class="iconfont iconarrow-left"></span></a>
+		</div>
+		<h1 style="height: 32px;width: 800px"></h1>
+		<div>
+			<blockquote id="texts" class="texts">
+			<p>
+			（在此输入）
+			</p>
+			</blockquote>
+			<table id="tb" class="tb">
+				<thead><tr><th colspan="2">（在此输入）</th></tr></thead>
+				<tbody>
+					<tr><td colspan="2" class="text-cen">
+					<form method="post" enctype="multipart/form-data" id="file_upload">
+					<input type="file" id="iu" name="img" accept="image/*"/>
+					<div id="img"></div>
+					</form></td></tr>
+					<tr><th>效果</th><td id="txt">（在此输入）</td></tr>
+					<tr><th>售价</th><td id="txt">（在此输入）</td></tr>
+					<tr><th>最大持有</th><td id="txt">（在此输入）</td></tr>
+					<tr><th>收纳数</th><td id="txt">（在此输入）</td></tr>
+					<tr><th>类别</th><td id="txt">（在此输入）</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<button class="save" onclick="save()">保存</button>
+	</div>
+	
+	<script>
+	
+	$("#txt").on("click",function(){
+		var td=$(this);
+		var txt=$.trim($(this).text());
+		var ip=$("<input type='text' placeholder='"+txt+"'/>")
+		$(this).html(ip);
+		ip.click(function(){return false});
+		ip.trigger("focus");
+		ip.blur(function(){
+			var ntxt=$(this).val();
+			if(ntxt!=""){
+				td.html(ntxt);
+			}
+			else{
+				td.html(txt);
+			}
+		})
+	})
+	$("thead th").on("click",function(){
+		var th=$(this);
+		var txt=$.trim($(this).text());
+		var ip=$("<input type='text' placeholder='"+txt+"'/>")
+		var tt=$("h1");
+		$(this).html(ip);
+		ip.click(function(){return false});
+		ip.trigger("focus");
+		ip.blur(function(){
+			var ntxt=$(this).val();
+			if(ntxt!=""){
+				th.html(ntxt);
+				tt.append(ntxt);
+			}
+			else{
+				th.html(txt);
+			}
+		})
+	})
+	$("blockquote p").on("click",function(){
+		var bq=$(this);
+		var txt=$(this).html();
+		console.log(txt);
+		var ctxt=txt.replaceAll("<br>","\r\n");
+		var ip=$("<textarea rows='15' cols='25' type='text' value='' placeholder='"+ctxt+"'></textarea>");
+		$(this).html(ip);
+		ip.click(function(){return false});
+		ip.trigger("focus");
+		ip.blur(function(){
+			var ntxt=$(this).val();
+			if(ntxt!=""){
+				var endValue=ntxt.replace(/\n|\r|(\r\n)|(\u0085)|(\u2028)|(\u2029)/g, "<br>");
+				bq.html(endValue);
+			}
+			else{
+				bq.html(txt);
+			}
+
+		})
+	})
+	$(".text-cen").on("click",function(){
+		var ip=$("#iu");
+		var getUrl = null;
+		ip.on("change",function(){
+			var img=$("#img");
+			img.empty();
+            var reader= new FileReader();
+  			reader.onload=function(e){
+              	$("<img/>",{
+              		"src":e.target.result,
+              		"height":300,
+              		"width":300
+              	}).appendTo(img);
+            }
+            img.show();
+            reader.readAsDataURL($(this)[0].files[0]);
+		}) 
+		
+	})
+	function save(){
+
+	}
+	</script>
+</body>
+</html>

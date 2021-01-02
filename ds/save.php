@@ -1,15 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>表单-黑暗之魂图书馆</title>
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="self.css">
-	<style type="text/css">
-		.box{
-			padding: 25px;
-		}
-	</style>
+	<title>搜索-黑暗之魂图书馆</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/self.css">
 </head>
 <body>
 	<div id="menu" class="header">
@@ -27,12 +23,9 @@
 		<div class="bodies" style="overflow: visible;">
 	</div>
 	<div class="bodies">
-		<div class="box">
-			<form name="formTest" action="save.php" method="post"  enctype="application/x-www-form-urlencoded">
-				<input type="text" name="textTest"  value="有七朵玫瑰花"/>
-    			<input type="submit" value="提交"/>  
-			</form>
-		</div>
+		<h2><?php echo $_POST["title"];?></h2>
+		<p><?php echo $_POST["text"];?></p>
+		<p>项目已提交，请等待处理</p>
 	</div>
 </body>
 </html>

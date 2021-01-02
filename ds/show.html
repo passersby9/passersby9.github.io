@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>:title</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/self.css">
+	<link rel="stylesheet" href="./font/font_2184537_7gi8xxcq17q/iconfont.css">
+	<script type="text/javascript" src="js/data.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.1/jquery.js"></script>
+	<script src="js/self.js"></script>
+	<script src="js/ejs.js"></script>
+	<base target="_parent" />
+	<meta charset="utf-8">
+</head>
+<body>
+	<iframe src="head.html" scrolling="no" frameborder="0" height="60" width="100%" marginheight="60px"></iframe>
+	
+	<div class="main"></div>
+	<div class="totop"><span class="iconfont iconarrow-up"></span></div>
+		<a href="/001.html#001" style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop"><span class="iconfont iconarrow-up"></span></a>
+	</div>
+	<div class="bodies" style="opacity: 1;">
+	</div>
+	<script type="text/javascript" s>
+	var hash=window.location.hash;
+	var path=hash.substring(1);
+	var m=prin(path);
+	$("title").html(path);
+	$.get("tpl/model.tpl",function(result){
+		var html=ejs.compile(result)(m);
+		$(".bodies").html(html);
+	})
+	</script>
+</body>
+</html>

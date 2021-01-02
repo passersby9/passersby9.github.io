@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.2/jquery.js"></script>
+</head>
+<body>
+	<table>
+    <thead>
+        <tr>
+            <th>栏目一</th>
+            <th>栏目二</th>
+            <th>栏目三</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>栏目一数据1</td>
+            <td>栏目二数据1</td>
+            <td>栏目三数据1</td>
+            <td><a href="#" class="remove" onclick="removerow(this)">删除</a></td>
+        </tr>
+        <tr>
+            <td>栏目一数据2</td>
+            <td>栏目二数据2</td>
+            <td>栏目三数据2</td>
+            <td><a href="#" class="remove" onclick="removerow(this)">删除</a></td>
+        </tr>        
+    </tbody>
+</table>
+
+<a href="#" id="add">增加一行</a>
+<script>
+$("#add").click(function(){
+	$("tbody").append("<tr><td>栏目一数据2</td>"+"<td>栏目二数据2</td><td>栏目三数据2</td>"+"<td><a href='#' class='remove' onclick='removerow(this)'>删除</a></td></tr>");
+})
+</script>
+<script type="text/javascript">
+function removerow(clicks){
+		$(clicks).parent().parent().remove();}
+</script>
+</body>
+</html>
