@@ -15,7 +15,7 @@ html,body{
 	.header{
 		position: absolute;
 		background-color: #948b8ba8;
-		height:80px; 
+		height:60px; 
 		right: 0;
 		left: 0;
 		display: flex;
@@ -46,8 +46,8 @@ html,body{
 		background-color: gray;
 	}
 	.bodies{
-		position: relative;
-		top:80px;
+		position: absolute;
+		top:60px;
 		left: 0;
 		right: 0;
 		opacity: 0.5;
