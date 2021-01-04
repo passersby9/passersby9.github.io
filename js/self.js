@@ -1,5 +1,5 @@
-//tab切换公用方法
-function tabChange(clicks) { //参数为tab点击的a标签，注意布局
+//tab鍒囨崲鍏敤鏂规硶
+function tabChange(clicks) { //鍙傛暟涓簍ab鐐瑰嚮鐨刟鏍囩锛屾敞鎰忓竷灞�
     clicks.on("click", function() {
         var cl = $(this).attr("class");
         $(this).parent().addClass("active");
@@ -10,4 +10,19 @@ function tabChange(clicks) { //参数为tab点击的a标签，注意布局
 }
 	function prin(i){
 		return eval("_"+i);
+	}
+	function login(){
+		alert("宸茬櫥褰昞n娆㈣繋,"+getcookie("account"));
+		$("#account").val("");
+		$("#code").val("");
+		window.location.href="javascript:history.go(-1)";
+	}
+	function getcookie(account){
+		var name = account + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
 	}

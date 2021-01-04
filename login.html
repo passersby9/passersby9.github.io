@@ -34,21 +34,6 @@
 		document.cookie="code="+code;
 		console.log(document.cookie);
 	})
-	function login(){
-		alert("已登录\n欢迎,"+$("#account").val());
-		$("#account").val("");
-		$("#code").val("");
-		window.location.href="javascript:history.go(-1)";
-	}
-	function getcookie(account){
-		var name = account + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i].trim();
-        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
-    }
-    return "";
-	}
 	window.addEventListener("DOMContentLoaded",function(){
 		var x=document.cookie;
 		if(x!="")
