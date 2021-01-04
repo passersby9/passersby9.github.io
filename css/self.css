@@ -12,6 +12,38 @@ html,body{
 	*{
 		font-size: 28px;
 	}
+	#guider ul{
+	display: flex;
+	list-style: none;
+}
+#guider li{
+	height: 60px;
+	width:80px;
+	text-align: center;
+	border-right: 1px solid #bbb; 
+}
+#guider li:last-child{
+	border-right: none;
+}
+#guider li a{
+	height: 60px;
+	display: block;
+	color:black;
+	width: 80px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 60px;
+}
+#guider li a:hover{
+	background-color: gray;
+}
+.bgclass{
+	background:url(img/cropped-297f51ce36d3d53947b200ce3687e950342ab042.png)no-repeat;
+	height: 90%;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+}
 	.header{
 		position: absolute;
 		background-color: #948b8ba8;
@@ -87,6 +119,13 @@ html,body{
 	*{
 		font-size: 14px;
 	}
+	.bgclass{
+	background:url(img/cropped-297f51ce36d3d53947b200ce3687e950342ab042.png)no-repeat;
+	height: 90%;
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+}
 	.header{
 		position: absolute;
 		background-color: #948b8ba8;
