@@ -113,6 +113,24 @@ html,body{
 		bottom: 100px;
 		background-clip: padding-box;
 	}
+	#sign_in{
+		height: 200px;
+		width: 400px;
+		position: relative;
+		margin-left: calc(50% - 200px);
+		margin-top: calc(50% - 100px);
+	}
+	#sign_in h2{
+		height: 40px;
+		font-size: 32px;
+	}
+	#sign_in input{
+		height: 40px;
+	}
+	#sign_in button{
+		height: 80px;
+		width:120px;
+	}
 }
 
 @media (min-width: 992px) {
@@ -224,6 +242,17 @@ html,body{
 	#list li:last-child{border-bottom: none;}
 	#list li a{display:block;color: black;height: 50px;width: 800px;text-decoration: none;line-height: 50px;}
 	#list li a:hover{background-color: gray;}
+	#list li a img{display: inline-block;border-right: 1px solid white;}
+	#list li a p{
+		display: inline-block;
+		height: 50px;width:100px;
+		line-height: 50px;text-align: center;
+		vertical-align: top;border-right: 1px solid white;
+	}
+	#list li a p:last-child{
+		border-right: none;
+		width: 540px;
+	}
 	.return{
 		height: 50px;
 		width:100px;
@@ -256,7 +285,25 @@ html,body{
 	#texts p{padding:25px;}
 	.text-cen{text-align:center;}
 }
-
+	#sign_in{
+		height: 200px;
+		width: 400px;
+		position: relative;
+		margin-left: calc(50% - 200px);
+		margin-top: calc(50% - 100px);
+	}
+	#sign_in h2{
+		height: 20px;
+		font-size: 28px;
+	}
+	#sign_in input{
+		height: 20px;
+		width: 340px;
+	}
+	#sign_in button{
+		height: 40px;
+		width:60px;
+	}
 	@font-face
 {
 	font-family: 'webfont';
