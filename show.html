@@ -13,19 +13,20 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<iframe src="head.html" scrolling="no" frameborder="0" height="60" width="100%" marginheight="60px"></iframe>
+	<iframe src="head.html" scrolling="no" frameborder="0" height="60" width="100%" marginheight="60px" id="head"></iframe>
 	
 	<div class="main"></div>
 	<div class="totop"><span class="iconfont iconarrow-up"></span></div>
-		<a href="/001.html#001" style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop"><span class="iconfont iconarrow-up"></span></a>
+		<a href=" " style="text-decoration: none;opacity: 0.1;background-color: gray" class="totop"><span class="iconfont iconarrow-up"></span></a>
 	</div>
 	<div class="bodies" style="opacity: 1;">
 	</div>
-	<script type="text/javascript" s>
+	<script type="text/javascript">
 	var hash=window.location.hash;
 	var path=hash.substring(1);
 	var m=prin(path);
 	$("title").html(path);
+	$("a").attr("href","/show.html#"+path);
 	$.get("tpl/model.tpl",function(result){
 		var html=ejs.compile(result)(m);
 		$(".bodies").html(html);
