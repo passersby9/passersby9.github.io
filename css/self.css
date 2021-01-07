@@ -117,6 +117,25 @@ html,body{
 		width:530px ;
 		overflow: hidden;
 	}
+	.texts{
+		background-color: #cfd5da;
+		float: right;
+		margin-right: 50px;
+		margin-top: 20px;
+		border-left: #c2c2c4 solid 4px;
+		display: block;
+	}
+	.tb{
+		background-color: transparent;
+		width:300px;
+		border-spacing: 0;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		margin-left: 10px;
+	}
+	#tb th,td{border-right:1px solid black;border-bottom:1px solid black;padding: 3px; }
+	#texts p{padding:25px;}
+	.text-cen{text-align:center;}
 	.totop{
 		height: 50px;
 		width: 50px;
@@ -127,6 +146,18 @@ html,body{
 		bottom: 100px;
 		background-clip: padding-box;
 	}
+	.return{
+		height: 50px;
+		width:100px;
+		background-color: #948b8ba8;
+		line-height: 50px;
+		text-align: center;
+		position: fixed;
+		top:100px;
+		margin-left: -100px;
+	}
+	#return a{display: block;height:50px;width: 100px;text-decoration: none;}
+	#return a:hover{ background-color: gray;opacity: 1; }
 	#sign_in{
 		height: 200px;
 		width: 400px;
