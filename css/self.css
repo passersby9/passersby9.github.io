@@ -103,6 +103,20 @@ html,body{
 	#list li:last-child{border-bottom: none;}
 	#list li a{display:block;color: black;height: 100px;width: 100%;text-decoration: none;line-height: 100px;}
 	#list li a:hover{background-color: gray;}
+	#list li a img{
+		height: 100px;width: 100px;
+		display: inline-block;border-right: 1px solid white;}
+	#list li a p{
+		display: inline-block;
+		height: 100px;width:170px;
+		line-height: 100px;text-align: center;
+		vertical-align: top;border-right: 1px solid white;
+	}
+	#list li a p:last-child{
+		border-right: none;
+		width:530px ;
+		overflow: hidden;
+	}
 	.totop{
 		height: 50px;
 		width: 50px;
@@ -242,7 +256,9 @@ html,body{
 	#list li:last-child{border-bottom: none;}
 	#list li a{display:block;color: black;height: 50px;width: 800px;text-decoration: none;line-height: 50px;}
 	#list li a:hover{background-color: gray;}
-	#list li a img{display: inline-block;border-right: 1px solid white;}
+	#list li a img{
+		height: 50px;width: 50px;
+		display: inline-block;border-right: 1px solid white;}
 	#list li a p{
 		display: inline-block;
 		height: 50px;width:100px;
