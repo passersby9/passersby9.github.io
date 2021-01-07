@@ -3,6 +3,11 @@
 		</div>
 		<h1 id="001"><%=titl%></h1>
 		<div>
+			<blockquote id="texts" class="texts">
+			<p>
+				<%-texts%>
+			</p>
+			</blockquote>
 			<table id="tb" class="tb">
 				<thead><tr><th colspan="2"><%=name%></th></tr></thead>
 				<tbody>
@@ -14,9 +19,4 @@
 					<tr><th>类别</th><td><%=type%></td></tr>
 				</tbody>
 			</table>
-			<blockquote id="texts" class="texts">
-			<p>
-				<%-texts%>
-			</p>
-			</blockquote>
 		</div>
